@@ -4,16 +4,12 @@
 
 struct Dragon : public Character
 {
-    std::string name;
     
-    Dragon(const string& name, int hp, int armor) : Character(hp, armor, 80)
+    Dragon(const std::string&, int, int);
     void attack(Character& other) override;
-    
-    const std::string& getName()
-    {
-        return name;
-    }
-    
+    const std::string& getName() override;
+    std::string getStats() override;
+   
 private:
     const std::string name;
 };
