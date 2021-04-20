@@ -1,7 +1,12 @@
 #include "DragonSlayer.h"
 #include "Dragon.h"
+#include "Utility.h"
 
-DragonSlayer::DragonSlayer(const std::string& name_, int hp_, int armor_) : Character(hp_, armor_, 80), name(name_) {}
+DragonSlayer::DragonSlayer(const std::string& name_, int hp_, int armor_) : Character(hp_, armor_, 80), name(name_)
+{
+    helpfulItems = makeHelpfulItems(1);
+    defensiveItems = makeDefensiveItems(1);
+}
 
 void DragonSlayer::attack(Character& other)
 {

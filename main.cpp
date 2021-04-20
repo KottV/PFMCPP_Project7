@@ -47,10 +47,10 @@ it's very easy to mess this task up.
          casting is introduced in the next video and project, so ignore any 'implicit conversion' warnings.
  */
 
-//#include "Item.h"
-//#include "Character.h"
-//#include "Dwarf.h"
-//#include "Paladin.h"
+#include "Item.h"
+#include "Character.h"
+#include "Dwarf.h"
+#include "Paladin.h"
 #include "Dragon.h"
 #include "DragonSlayer.h"
 //==========================================================
