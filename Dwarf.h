@@ -11,4 +11,3 @@ struct Dwarf : public Character
 private:
     const std::string name;
 };
-

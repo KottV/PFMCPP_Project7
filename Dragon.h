@@ -13,4 +13,3 @@ struct Dragon : public Character
 private:
     const std::string name;
 };
-

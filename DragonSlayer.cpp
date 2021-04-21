@@ -37,4 +37,3 @@ std::string DragonSlayer::getStats()
 {
     return getCharacterStats(this);
 }
-
