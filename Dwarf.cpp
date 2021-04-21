@@ -17,4 +17,7 @@ const std::string& Dwarf::getName()
     return name;
 }
 
-std::string Dwarf::getStats() { return "stat"; }
+std::string Dwarf::getStats()
+{
+    return getCharacterStats(this);
+}

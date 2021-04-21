@@ -33,4 +33,8 @@ const std::string& DragonSlayer::getName()
     return name;
 }
 
-std::string DragonSlayer::getStats() { return "stat"; }
+std::string DragonSlayer::getStats()
+{
+    return getCharacterStats(this);
+}
+
