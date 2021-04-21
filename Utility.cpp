@@ -44,21 +44,21 @@ std::string getCharacterStats(Character* ch)
     return str;
 }
 
-void useDefensiveItem(Character* character, Item& item)
+void useDefensiveItem(Character* character, Item* item)
 {
     //dwarves, paladins, and DragonSlayers get extra boosts from defensive item.
     if( auto* ch = dynamic_cast<Dwarf*>(character) )
     {
-        ch->boostArmor( item.getBoost() * 1.1 );
+        ch->boostArmor( item->getBoost() * 1.1 );
     }
     else if( auto* ch = dynamic_cast<Paladin*>(character) )
     {
         //same with paladins
-        ch->boostArmor( item.getBoost() * 1.3 );
+        ch->boostArmor( item->getBoost() * 1.3 );
     }
     else if( auto* ch = dynamic_cast<DragonSlayer*>(character))
     {
-        ch->boostArmor( item.getBoost() * 1.5 );
+        ch->boostArmor( item->getBoost() * 1.5 );
     }
     else if( auto* ch = dynamic_cast<Dragon*>(character) )
     {
