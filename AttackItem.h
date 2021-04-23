@@ -2,6 +2,6 @@
 
 struct AttackItem : Item
 {
-    AttackItem() : Item("attack item", 2) { }
+    AttackItem() : Item("attack item", 10) { }
     void use(Character* character) override;
 };

@@ -33,6 +33,7 @@ struct Character
     bool getIsDefending() const { return isDefending; }
     
     const std::vector<std::unique_ptr<Item>>& getHelpfulItems() const { return helpfulItems; }
+    const std::vector<std::unique_ptr<Item>>& getAttackItems() const { return attackItems; }
     const std::vector<std::unique_ptr<Item>>& getDefensiveItems() const { return defensiveItems; }
     
     void boostArmor( int amount )
@@ -63,6 +64,7 @@ struct Character
     }*/
 protected:
     std::vector<std::unique_ptr<Item>> defensiveItems;
+    std::vector<std::unique_ptr<Item>> attackItems;
     std::vector<std::unique_ptr<Item>> helpfulItems;
     int hitPoints, armor;
     int attackDamage;
