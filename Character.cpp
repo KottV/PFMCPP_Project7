@@ -112,9 +112,9 @@ void Character::attackInternal(Character& other)
         if (attackDamage < *initialAttackDamage)
             attackDamage = *initialAttackDamage;
         
-        boostHitPoints(getHP() * 0.1);
-        boostArmor(getArmorLevel() * 0.1);
-        boostAttackDamage(getAttackDamage() * 0.1);
+        hitPoints += getHP() * 0.1;
+        armor += getArmorLevel() * 0.1;
+        attackDamage += getAttackDamage() * 0.1;
         
         initialHitPoints.reset(new int(hitPoints));
         initialArmorLevel.reset(new int(armor));
