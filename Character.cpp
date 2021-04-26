@@ -5,6 +5,8 @@
 #include "DefensiveItem.h"
 #include "HelpfulItem.h"
 
+Character::~Character() {}
+
 Character::Character(int hp, int armor_, int attackDamage_ ) :
     hitPoints(hp),
     armor(armor_),
@@ -23,7 +25,7 @@ void Character::attack( Character& other )
         std::cout << "make another party member use an item to revive them" << std::endl << std::endl;
         return;
     }
-        
+
     isDefending = false;
     std::cout << getName() << " has attacked " << other.getName() << std::endl;
     
@@ -87,7 +89,7 @@ int Character::takeDamage(int damage)
 }
 
 
-#include <assert>
+//#include <assert>
 void Character::attackInternal(Character& other)
 {
     if( other.hitPoints <= 0 )
@@ -98,15 +100,28 @@ void Character::attackInternal(Character& other)
             b) your stats are boosted 10%
             c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
       */
-        assert(false);
+    
+        levelUp(hitPoints, *initialHitPoints);
+        levelUp(armor, *initialArmorLevel);
+        levelUp(attackDamage, *initialAttackDamage);
+  //      assert(false);
         std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;        
     }
+}
+
+void Character::levelUp(int& stat, int& initialStat)
+{
+    if (stat < initialStat)
+        stat = initialStat;
+
+    stat += stat * 0.1;
+    initialStat = stat;
 }
 
 void Character::printStats()
 {
     std::cout << getName() << "'s stats: " << std::endl;
-    assert(false);
+    //assert(false);
     /*
     make your getStats() use a function from the Utility.h
     */
