@@ -1,4 +1,5 @@
 #include "Dwarf.h"
+#include "Utility.h"
 
 Dwarf::Dwarf(const std::string& name_, int hp_, int armor_) : Character(hp_, armor_, 4), name(name_)
 {

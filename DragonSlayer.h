@@ -7,7 +7,7 @@ struct DragonSlayer : Character
     void attack(Character& other) override;
     const std::string& getName() override;
     std::string getStats() override;
-    AttackItem attackItem;
+    std::unique_ptr<AttackItem> attackItem = std::make_unique<AttackItem>();
 
 private:
     const std::string name;

@@ -6,6 +6,7 @@ DragonSlayer::DragonSlayer(const std::string& name_, int hp_, int armor_) : Char
 {
     helpfulItems = makeHelpfulItems(1);
     defensiveItems = makeDefensiveItems(1);
+    //attackItem = new (AttackItem);
 }
 
 void DragonSlayer::attack(Character& other)
@@ -17,17 +18,21 @@ void DragonSlayer::attack(Character& other)
         //so they should USE their attack item before attacking the dragon... 
         //note that items are single-use only, so you need to reset it after use.  
         //look in the Character class for how the other item types are reset after use.
-
-        attackItem.use(this);
-
+        
+        if (attackItem != nullptr)
+        {
+            attackItem->use(this);
+            attackItem.reset();
+        }
+        
         while( dragon->getHP() > 0 )
         {
-          dragon->takeDamage(attackDamage);
+            dragon->takeDamage(attackDamage);
         }
     }
-        
+    
     Character::attack(other);
-        
+    
 }
 
 const std::string& DragonSlayer::getName()
