@@ -99,7 +99,7 @@ int main()
     std::vector<Character*> characters { &dwarf, &paladin, &dragon, &dragonSlayer };
     for( auto* character : characters )
         character->printStats();
-    
+ 
     return 0;
 }
 
