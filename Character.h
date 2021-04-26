@@ -53,7 +53,7 @@ struct Character
         std::cout << getName() << "'s attack damage level has been boosted to " << attackDamage << std::endl;
     }
 
-    void levelUp(int*, std::unique_ptr<int>&);
+    void levelUp(int&, int&);
 
     void printStats();
     /*{
