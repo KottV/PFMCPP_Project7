@@ -2,10 +2,9 @@
 
 #include "Character.h"
 
-struct Paladin : public Character
+struct Paladin : Character
 {
     Paladin(const std::string&, int, int);
-    void attack(Character& other) override;
     const std::string& getName() override;
     std::string getStats() override;
 private:

@@ -1,7 +1,7 @@
 #pragma once
 #include "Character.h"
 
-struct DragonSlayer : public Character
+struct DragonSlayer : Character
 {
     DragonSlayer(const std::string&, int, int);
     void attack(Character& other) override;

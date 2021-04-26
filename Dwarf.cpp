@@ -6,12 +6,6 @@ Dwarf::Dwarf(const std::string& name_, int hp_, int armor_) : Character(hp_, arm
     defensiveItems = makeDefensiveItems(1);
 }
 
-void Dwarf::attack(Character& other)
-{
-    std::cout << name << " is attacking " << other.getName() << "!!!" << std::endl;
-    Character::attack(other);
-}
-
 const std::string& Dwarf::getName()
 {
     return name;

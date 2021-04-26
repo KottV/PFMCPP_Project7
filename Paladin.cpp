@@ -7,12 +7,6 @@ Paladin::Paladin(const std::string& name_, int hp_, int armor_) : Character(hp_,
     defensiveItems = makeDefensiveItems(13);
 }
 
-void Paladin::attack(Character& other)
-{
-    std::cout << name << " is attacking " << other.getName() << "!!!" << std::endl;
-    Character::attack(other);
-}
-
 const std::string& Paladin::getName()
 {
     return name;

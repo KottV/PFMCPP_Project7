@@ -26,8 +26,6 @@ void Character::attack( Character& other )
         return;
     }
 
-    //printStats();
-        
     isDefending = false;
     std::cout << getName() << " has attacked " << other.getName() << std::endl;
     
