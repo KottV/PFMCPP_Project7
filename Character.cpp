@@ -109,7 +109,7 @@ void Character::attackInternal(Character& other)
     }
 }
 
-void Character::levelUp(int &stat, int& initialStat)
+void Character::levelUp(int& stat, int& initialStat)
 {
     if (stat < initialStat)
         stat = initialStat;
